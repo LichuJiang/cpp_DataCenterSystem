@@ -5,6 +5,22 @@
 
 #include "_public.h"
 
+struct st_code
+{
+  char provname[31]; //省
+  char obtid[11];    //站号
+  char obtname[31];  //站名
+  double lat;        //纬度
+  double lon;        //经度
+  double height;     //海拔高度
+};
+//存放全国气象站点参数的容器
+vector<struct st_stcode> vstcode;
+
+//把站点参数文件中加载到vstcode容器中
+bool LoadSTCode(const char *inifile);
+
+
 CLogFile logfile;
 
 int main(int argc, char *argv[]){
@@ -12,8 +28,8 @@ int main(int argc, char *argv[]){
   if(argc!=4){
     printf("Using:./crtsurfdata2 inifile outpath logfiel\n");
     printf("Example:/project/idc1/bin/crtsurfdata2 /project/idc1/ini/stcode.ini /tmp/surfdata /log/idccrtsurfdata2.log\n\n");    
-    printf("inifile  全国气象沾点参数文件名 \n");
-    printf("outpath  全国气象沾点数据文件存放的目录 \n");
+    printf("inifile  全国气象站点参数文件名 \n");
+    printf("outpath  全国气象站点数据文件存放的目录 \n");
     printf("logfile  本程序运行的日志文件名 \n\n");
     
     return -1;

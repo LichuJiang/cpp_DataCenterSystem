@@ -1,7 +1,7 @@
 /*
  *  程序名：fileclient5.cpp，
  *  把日志整理了一下。
- *  作者：吴从周。
+ *   author: Lichu Jiang
 */
 #include "_public.h"
 
