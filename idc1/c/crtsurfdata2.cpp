@@ -40,6 +40,16 @@ int main(int argc, char *argv[]){
 	return -1;
     }
     logfile.Write("crtsurfdata2 开始运行 \n");
+
+    //处理业务的代码
+    //把站点参数文件中加载到vstcode容器中
+    if(LoadSTCode(argv[1])==false) return -1;
+
     logfile.Write("crtsurfdata2 运行结束 \n");
     return 0;
+}
+
+//把站点参数文件中加载到vstcode容器中
+bool LoadSTCode(const char *inifile){
+  
 }
