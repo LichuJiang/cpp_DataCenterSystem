@@ -97,8 +97,9 @@ bool LoadSTCode(const char *inifile)
   }
 
   
-  for (int ii=0;ii<vstcode.size();ii++)
-    logfile.Write(vstcode[ii].provname,vstcode[ii].obtid,vstcode[ii].obtname,vstcode[ii].lat,vstcode[ii].lon,vstcode[ii].height);
+ for (int ii = 0; ii < vstcode.size(); ii++)
+    logfile.Write("provname=%s,obtid=%s,obtname=%s,lat=%.2f,lon=%.2f,height=%.2f\n",vstcode[ii].provname,vstcode[ii].obtid,vstcode[ii].obtname,vstcode[ii].lat,vstcode[ii].lon,vstcode[ii].height);
+
   
 
   return true;
