@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun 26 14:58:05 2022
+# Make data base, printed on Fri Jul 15 05:32:50 2022
 
 # Variables
 
@@ -18,8 +18,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 .SHELLFLAGS := -c
 # environment
 VSCODE_AGENT_FOLDER = /root/.vscode-server
-# environment
-VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -41,19 +39,17 @@ MAKEFILE_LIST :=
 # environment
 HISTCONTROL = ignoredups
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
 LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /root
 # environment
-SSH_CONNECTION = 108.41.198.131 50105 45.79.180.158 22
+SSH_CONNECTION = 108.41.198.131 63708 45.79.180.158 22
 # environment
-PATH = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+PATH = /root/.vscode-server/bin/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
 # environment
 XDG_RUNTIME_DIR = /run/user/0
 # environment
-VSCODE_LOG_STACK = false
+ELECTRON_RUN_AS_NODE = 1
 # environment
 SELINUX_USE_CURRENT_RANGE = 
 # default
@@ -61,11 +57,9 @@ SELINUX_USE_CURRENT_RANGE =
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
 PWD = /project
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-4e9c6430-f2d3-4d1b-9474-4f8f42b60b79.sock
+VSCODE_IPC_HOOK_CLI = /run/user/0/vscode-ipc-42df2c0d-30d1-4790-ab5a-7a1dafeebdce.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -95,7 +89,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 5
 # environment
-XDG_SESSION_ID = 1445
+XDG_SESSION_ID = 4601
 # environment
 USER = root
 # makefile
@@ -113,13 +107,13 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 108.41.198.131 50105 22
+SSH_CLIENT = 108.41.198.131 63708 22
 # environment
 MAIL = /var/spool/mail/root
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /root/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/helpers/browser.sh
+BROWSER = /root/.vscode-server/bin/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a/bin/helpers/browser.sh
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
@@ -142,10 +136,8 @@ HISTSIZE = 1000
 .RECIPEPREFIX := 
 # environment
 LANG = C
-# environment
-VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
-# Load=67/1024=7%, Rehash=0, Collisions=6/86=7%
+# Load=63/1024=6%, Rehash=0, Collisions=6/82=7%
 
 # Pattern-specific Variable Values
 
@@ -218,7 +210,7 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=1/22=5%
-# Finished Make data base on Sun Jun 26 14:58:05 2022
+# Finished Make data base on Fri Jul 15 05:32:50 2022
 
  
 make: *** No rule to make target `all'.  Stop.

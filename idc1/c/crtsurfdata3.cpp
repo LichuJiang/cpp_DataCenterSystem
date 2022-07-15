@@ -1,8 +1,3 @@
-/*
-* program name: crtsurfdata2.cpp   this program used to generate the data of weather station
-* author: Lichu Jiang
-*/
-
 #include "_public.h"
 
 // 全国气象站点参数结构体。
@@ -29,8 +24,8 @@ int main(int argc,char *argv[])
   if (argc!=4) 
   {
     // 如果参数非法，给出帮助文档。
-    printf("Using:./crtsurfdata2 inifile outpath logfile\n");
-    printf("Example:/project/idc1/bin/crtsurfdata2 /project/idc1/ini/stcode.ini /tmp/surfdata /log/idc/crtsurfdata2.log\n\n");
+    printf("Using:./crtsurfdata3 inifile outpath logfile\n");
+    printf("Example:/project/idc1/bin/crtsurfdata3 /project/idc1/ini/stcode.ini /tmp/surfdata /log/idc/crtsurfdata2.log\n\n");
 
     printf("inifile 全国气象站点参数文件名。\n");
     printf("outpath 全国气象站点数据文件存放的目录。\n");
@@ -45,13 +40,13 @@ int main(int argc,char *argv[])
     printf("logfile.Open(%s) failed.\n",argv[3]); return -1;
   }
 
-  logfile.Write("crtsurfdata2 开始运行。\n");
+  logfile.Write("crtsurfdata3 开始运行。\n");
 
   // 把站点参数文件中加载到vstcode容器中。 
   if (LoadSTCode(argv[1])==false) return -1;
 
 
-  logfile.WriteEx("crtsurfdata2 运行结束。\n");
+  logfile.WriteEx("crtsurfdata3 运行结束。\n");
 
   return 0;
 }
@@ -82,7 +77,7 @@ bool LoadSTCode(const char *inifile)
     CmdStr.SplitToCmd(strBuffer,",",true);
 
     if (CmdStr.CmdCount()!=6) continue;     // 扔掉无效的行。
-  
+
     // 把站点参数的每个数据项保存到站点参数结构体中。
     memset(&stcode,0,sizeof(struct st_stcode));
     CmdStr.GetValue(0, stcode.provname,30); // 省
@@ -96,9 +91,9 @@ bool LoadSTCode(const char *inifile)
     vstcode.push_back(stcode);
   }
 
-  /*
+  
  for (int ii = 0; ii < vstcode.size(); ii++)
     logfile.Write("provname=%s,obtid=%s,obtname=%s,lat=%.2f,lon=%.2f,height=%.2f\n",vstcode[ii].provname,vstcode[ii].obtid,vstcode[ii].obtname,vstcode[ii].lat,vstcode[ii].lon,vstcode[ii].height);
-  */
+
   return true;
 }
